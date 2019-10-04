@@ -1,6 +1,6 @@
 **Day Twelve - 30 days of React challenge - "Random Person Generator" with API**
 
-Today i've connected to an API within the lifecycle method componentDidMount, to create a random person generator with https://randomuser.me/
+Today i've connected to an API within the lifecycle method componentDidMount, to create a random person generator with https://randomuser.me/ 
 
 **Concepts Explored:**
 - Fetch with React
