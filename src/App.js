@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import logo from './friedhead.svg';
+import UserAvatar from './UserAvatar';
 import './App.css';
+
+import UserCard from './UserCard';
 
 
 class App extends Component {
@@ -19,8 +21,18 @@ class App extends Component {
 
         return (
           <div>
-            <img src={person.picture.large}/> 
-            <p>{person.email}</p>
+            <UserAvatar avatar = {person.picture.large}/>
+            <UserCard 
+            firstName = {person.name.first} 
+            lastName = {person.name.last} 
+            gender = {person.gender} 
+            locationCountry = {person.location.country} 
+            locationCity = {person.location.city}
+            dobDate = {person.dob.date}
+            dobAge = {person.dob.age}
+            phone = {person.phone}
+            email = {person.email}
+            />            
           </div>
           )
       })
@@ -31,25 +43,25 @@ class App extends Component {
 
 
 render() {
+  
 
 // ------  THE RETURN BLOCK  ------ //
 
 return (
   <div className="App">
 
-
 {/* HEADER */}
 
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1>30 days of React</h1>
-          <h2>Day Twelve / Person Generator</h2>
+        
+
         </header>
 
 
 {/* COMPONENTS */}
+  {this.state.pictures}
 
-         {this.state.pictures}     
+         
   
   </div>
   )
